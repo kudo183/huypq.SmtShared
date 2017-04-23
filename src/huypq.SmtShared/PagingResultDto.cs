@@ -17,12 +17,15 @@ namespace huypq.SmtShared
         [ProtoBuf.ProtoMember(4)]
         public List<T> Items { get; set; }
         [ProtoBuf.ProtoMember(5)]
-        public long VersionNumber { get; set; }
+        public long LastUpdateTime { get; set; }
         [ProtoBuf.ProtoMember(6)]
         public string ErrorMsg { get; set; }
         [ProtoBuf.ProtoMember(7)]
-        public long ServerStartTime { get; set; }
-        [ProtoBuf.ProtoMember(8)]
         public int PageSize { get; set; }
+
+        public PagingResultDto()
+        {
+            Items = new List<T>();
+        }
     }
 }

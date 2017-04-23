@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D0EA0474-D927-4193-9DDA-58363E8A64C4}</ProjectGuid>
+    <ProjectGuid>{8D59423A-9325-484D-A398-FEDD48375155}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>huypq.SmtShared</RootNamespace>
-    <AssemblyName>huypq.SmtShared</AssemblyName>
+    <RootNamespace>huypq.SmtSharedTest</RootNamespace>
+    <AssemblyName>huypq.SmtSharedTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
       <HintPath>..\packages\protobuf-net.2.1.0\lib\net451\protobuf-net.dll</HintPath>
       <Private>True</Private>
@@ -44,22 +48,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\src\huypq.SmtShared\DtoState.cs">
-      <Link>DtoState.cs</Link>
+    <Compile Include="..\..\..\src\huypq.SmtSharedTest\UserClaimDto.cs">
+      <Link>UserClaimDto.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared\PagingResultDto.cs">
-      <Link>PagingResultDto.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared\SmtIDto.cs">
-      <Link>SmtIDto.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared\SmtIUserClaimDto.cs">
-      <Link>SmtIUserClaimDto.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared\SmtIUserDto.cs">
-      <Link>SmtIUserDto.cs</Link>
+    <Compile Include="..\..\..\src\huypq.SmtSharedTest\UserDto.cs">
+      <Link>UserDto.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\huypq.SmtShared\huypq.SmtShared.csproj">
+      <Project>{d0ea0474-d927-4193-9dda-58363e8a64c4}</Project>
+      <Name>huypq.SmtShared</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
