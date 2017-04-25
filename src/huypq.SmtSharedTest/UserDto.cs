@@ -13,7 +13,6 @@ namespace huypq.SmtSharedTest
         string oPasswordHash;
         int oTenantID;
         long oTokenValidTime;
-        bool oIsConfirmed;
         bool oIsLocked;
         string oUserName;
 
@@ -24,7 +23,6 @@ namespace huypq.SmtSharedTest
         string _PasswordHash;
         int _TenantID;
         long _TokenValidTime;
-        bool _IsConfirmed;
         bool _IsLocked;
         string _UserName;
 
@@ -45,10 +43,8 @@ namespace huypq.SmtSharedTest
         [ProtoBuf.ProtoMember(8)]
         public string UserName { get { return _UserName; } set { _UserName = value; OnPropertyChanged(); } }
         [ProtoBuf.ProtoMember(9)]
-        public bool IsConfirmed { get { return _IsConfirmed; } set { _IsConfirmed = value; OnPropertyChanged(); } }
-        [ProtoBuf.ProtoMember(10)]
         public bool IsLocked { get { return _IsLocked; } set { _IsLocked = value; OnPropertyChanged(); } }
-        [ProtoBuf.ProtoMember(11)]
+        [ProtoBuf.ProtoMember(10)]
         public int State { get; set; }
 
         public void SetCurrentValueAsOriginalValue()
@@ -61,7 +57,6 @@ namespace huypq.SmtSharedTest
             oTenantID = TenantID;
             oTokenValidTime = TokenValidTime;
             oUserName = UserName;
-            oIsConfirmed = IsConfirmed;
             oIsLocked = IsLocked;
         }
 
@@ -74,7 +69,6 @@ namespace huypq.SmtSharedTest
             || (oPasswordHash != PasswordHash)
             || (oTenantID != TenantID)
             || (oTokenValidTime != TokenValidTime)
-             || (oIsConfirmed != IsConfirmed)
               || (oIsLocked != IsLocked)
             || (oUserName != UserName);
         }
