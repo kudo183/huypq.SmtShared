@@ -1,4 +1,4 @@
-﻿namespace huypq.SmtShared
+﻿namespace huypq.SmtShared.Constant
 {
     public class DtoState
     {

@@ -44,8 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\src\huypq.SmtShared\DtoState.cs">
-      <Link>DtoState.cs</Link>
+    <Compile Include="..\..\..\src\huypq.SmtShared\Constant\ControllerAction.cs">
+      <Link>Constant\ControllerAction.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\huypq.SmtShared\Constant\DtoState.cs">
+      <Link>Constant\DtoState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\huypq.SmtShared\Constant\TokenPurpose.cs">
+      <Link>Constant\TokenPurpose.cs</Link>
     </Compile>
     <Compile Include="..\..\..\src\huypq.SmtShared\PagingResultDto.cs">
       <Link>PagingResultDto.cs</Link>
@@ -59,6 +65,7 @@
     <Compile Include="..\..\..\src\huypq.SmtShared\SmtIUserDto.cs">
       <Link>SmtIUserDto.cs</Link>
     </Compile>
+    <Compile Include="Constant\SerializeType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
