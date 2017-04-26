@@ -20,8 +20,6 @@ namespace huypq.SmtShared
         public long LastUpdateTime { get; set; }
         [ProtoBuf.ProtoMember(6)]
         public string ErrorMsg { get; set; }
-        [ProtoBuf.ProtoMember(7)]
-        public int PageSize { get; set; }
 
         public PagingResultDto()
         {
