@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\src\huypq.SmtSharedTest\TestChildDataDto.cs">
+      <Link>TestChildDataDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\huypq.SmtSharedTest\TestDataDto.cs">
+      <Link>TestDataDto.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\src\huypq.SmtSharedTest\UserClaimDto.cs">
       <Link>UserClaimDto.cs</Link>
     </Compile>
@@ -55,6 +61,7 @@
       <Link>UserDto.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestDataDto.part.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\huypq.SmtShared\huypq.SmtShared.csproj">

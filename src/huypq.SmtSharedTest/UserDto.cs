@@ -9,6 +9,7 @@ namespace huypq.SmtSharedTest
         System.DateTime oCreateDate;
         string oEmail;
         int oID;
+        long oCreateTime;
         long oLastUpdateTime;
         string oPasswordHash;
         int oTenantID;
@@ -19,6 +20,7 @@ namespace huypq.SmtSharedTest
         System.DateTime _CreateDate;
         string _Email;
         int _ID;
+        long _CreateTime;
         long _LastUpdateTime;
         string _PasswordHash;
         int _TenantID;
@@ -46,12 +48,15 @@ namespace huypq.SmtSharedTest
         public bool IsLocked { get { return _IsLocked; } set { _IsLocked = value; OnPropertyChanged(); } }
         [ProtoBuf.ProtoMember(10)]
         public int State { get; set; }
+        [ProtoBuf.ProtoMember(11)]
+        public long CreateTime { get { return _CreateTime; } set { _CreateTime = value; OnPropertyChanged(); } }
 
         public void SetCurrentValueAsOriginalValue()
         {
             oCreateDate = CreateDate;
             oEmail = Email;
             oID = ID;
+            oCreateTime = CreateTime;
             oLastUpdateTime = LastUpdateTime;
             oPasswordHash = PasswordHash;
             oTenantID = TenantID;
@@ -60,11 +65,30 @@ namespace huypq.SmtSharedTest
             oIsLocked = IsLocked;
         }
 
+        public void Update(object obj)
+        {
+            var dto = obj as SmtUserDto;
+            if (dto == null)
+            {
+                return;
+            }
+
+            CreateDate = dto.CreateDate;
+            Email = dto.Email;
+            LastUpdateTime = dto.LastUpdateTime;
+            PasswordHash = dto.PasswordHash;
+            TenantID = dto.TenantID;
+            TokenValidTime = dto.TokenValidTime;
+            UserName = dto.UserName;
+            IsLocked = dto.IsLocked;
+        }
+
         public bool HasChange()
         {
             return (oCreateDate != CreateDate)
             || (oEmail != Email)
             || (oID != ID)
+            || (oCreateTime != CreateTime)
             || (oLastUpdateTime != LastUpdateTime)
             || (oPasswordHash != PasswordHash)
             || (oTenantID != TenantID)

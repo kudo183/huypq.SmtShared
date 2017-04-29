@@ -19,6 +19,8 @@
         public class SmtEntityBase
         {
             public const string Get = "get";
+            public const string GetAll = "getall";
+            public const string GetUpdate = "getupdate";
             public const string GetByID = "getbyid";
             public const string Save = "save";
             public const string Add = "add";

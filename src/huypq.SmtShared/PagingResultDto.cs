@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace huypq.SmtShared
 {
@@ -18,8 +15,6 @@ namespace huypq.SmtShared
         public List<T> Items { get; set; }
         [ProtoBuf.ProtoMember(5)]
         public long LastUpdateTime { get; set; }
-        [ProtoBuf.ProtoMember(6)]
-        public string ErrorMsg { get; set; }
 
         public PagingResultDto()
         {
