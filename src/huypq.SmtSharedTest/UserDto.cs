@@ -4,7 +4,7 @@ using System.ComponentModel;
 namespace huypq.SmtSharedTest
 {
     [ProtoBuf.ProtoContract]
-    public partial class SmtUserDto : SmtIUserDto, INotifyPropertyChanged
+    public partial class SmtUserDto : IUserDto, INotifyPropertyChanged
     {
         System.DateTime oCreateDate;
         string oEmail;

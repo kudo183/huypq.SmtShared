@@ -1,6 +1,6 @@
 ﻿namespace huypq.SmtShared
 {
-    public interface SmtIDto
+    public interface IDto
     {
         int ID { get; set; }
         int TenantID { get; set; }

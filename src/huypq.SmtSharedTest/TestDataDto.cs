@@ -4,7 +4,7 @@ using System.ComponentModel;
 namespace huypq.SmtSharedTest
 {
     [ProtoBuf.ProtoContract]
-    public partial class TestDataDto : SmtIDto, INotifyPropertyChanged
+    public partial class TestDataDto : IDto, INotifyPropertyChanged
     {
         string oData;
         int oID;

@@ -2,7 +2,7 @@
 
 namespace huypq.SmtShared
 {
-    public interface SmtIUserDto : SmtIDto
+    public interface IUserDto : IDto
     {
         bool IsLocked { get; set; }
         DateTime CreateDate { get; set; }

@@ -53,17 +53,17 @@
     <Compile Include="..\..\..\src\huypq.SmtShared\Constant\TokenPurpose.cs">
       <Link>Constant\TokenPurpose.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\src\huypq.SmtShared\IDto.cs">
+      <Link>IDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\huypq.SmtShared\IUserClaimDto.cs">
+      <Link>IUserClaimDto.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\src\huypq.SmtShared\IUserDto.cs">
+      <Link>IUserDto.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\src\huypq.SmtShared\PagingResultDto.cs">
       <Link>PagingResultDto.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared\SmtIDto.cs">
-      <Link>SmtIDto.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared\SmtIUserClaimDto.cs">
-      <Link>SmtIUserClaimDto.cs</Link>
-    </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared\SmtIUserDto.cs">
-      <Link>SmtIUserDto.cs</Link>
     </Compile>
     <Compile Include="Constant\SerializeType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
