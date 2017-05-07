@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace huypq.SmtSharedTest
+namespace huypq.SmtShared.Test
 {
     public partial class TestDataDto
     {

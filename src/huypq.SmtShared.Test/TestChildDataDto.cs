@@ -1,77 +1,78 @@
 ﻿using huypq.SmtShared;
 using System.ComponentModel;
 
-namespace huypq.SmtSharedTest
+namespace huypq.SmtShared.Test
 {
     [ProtoBuf.ProtoContract]
-    public partial class SmtUserClaimDto : IUserClaimDto, INotifyPropertyChanged
+    public partial class TestChildDataDto : IDto, INotifyPropertyChanged
     {
-        string oClaim;
-        int oID;
         long oCreateTime;
+        string oData;
+        int oID;
         long oLastUpdateTime;
         int oTenantID;
-        int oUserID;
+        int oTestDataID;
 
-        string _Claim;
-        int _ID;
         long _CreateTime;
+        string _Data;
+        int _ID;
         long _LastUpdateTime;
         int _TenantID;
-        int _UserID;
+        int _TestDataID;
 
         [ProtoBuf.ProtoMember(1)]
-        public string Claim { get { return _Claim; } set { _Claim = value; OnPropertyChanged(); } }
-        [ProtoBuf.ProtoMember(2)]
-        public int ID { get { return _ID; } set { _ID = value; OnPropertyChanged(); } }
-        [ProtoBuf.ProtoMember(3)]
         public long CreateTime { get { return _CreateTime; } set { _CreateTime = value; OnPropertyChanged(); } }
+        [ProtoBuf.ProtoMember(2)]
+        public string Data { get { return _Data; } set { _Data = value; OnPropertyChanged(); } }
+        [ProtoBuf.ProtoMember(3)]
+        public int ID { get { return _ID; } set { _ID = value; OnPropertyChanged(); } }
         [ProtoBuf.ProtoMember(4)]
         public long LastUpdateTime { get { return _LastUpdateTime; } set { _LastUpdateTime = value; OnPropertyChanged(); } }
         [ProtoBuf.ProtoMember(5)]
         public int TenantID { get { return _TenantID; } set { _TenantID = value; OnPropertyChanged(); } }
         [ProtoBuf.ProtoMember(6)]
-        public int UserID { get { return _UserID; } set { _UserID = value; OnPropertyChanged(); } }
+        public int TestDataID { get { return _TestDataID; } set { _TestDataID = value; OnPropertyChanged(); } }
         [ProtoBuf.ProtoMember(7)]
         public int State { get; set; }
 
         public void SetCurrentValueAsOriginalValue()
         {
-            oClaim = Claim;
-            oID = ID;
             oCreateTime = CreateTime;
+            oData = Data;
+            oID = ID;
             oLastUpdateTime = LastUpdateTime;
             oTenantID = TenantID;
-            oUserID = UserID;
+            oTestDataID = TestDataID;
         }
 
         public void Update(object obj)
         {
-            var dto = obj as SmtUserClaimDto;
+            var dto = obj as TestChildDataDto;
             if (dto == null)
             {
                 return;
             }
-
-            Claim = dto.Claim;
+            
+            Data = dto.Data;
             LastUpdateTime = dto.LastUpdateTime;
             TenantID = dto.TenantID;
-            UserID = dto.UserID;
+            TestDataID = dto.TestDataID;
         }
 
         public bool HasChange()
         {
-            return (oClaim != Claim)
+            return (oCreateTime != CreateTime)
+            || (oData != Data)
             || (oID != ID)
-            || (oCreateTime != CreateTime)
             || (oLastUpdateTime != LastUpdateTime)
             || (oTenantID != TenantID)
-            || (oUserID != UserID);
+            || (oTestDataID != TestDataID);
         }
 
-        object _UserIDSources;
+        object _TestDataIDSources;
+
         [Newtonsoft.Json.JsonIgnore]
-        public object UserIDSources { get { return _UserIDSources; } set { _UserIDSources = value; OnPropertyChanged(); } }
+        public object TestDataIDSources { get { return _TestDataIDSources; } set { _TestDataIDSources = value; OnPropertyChanged(); } }
 
         public event PropertyChangedEventHandler PropertyChanged;
         public virtual void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string name = null)

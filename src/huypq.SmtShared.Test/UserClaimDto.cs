@@ -1,25 +1,27 @@
 ﻿using huypq.SmtShared;
 using System.ComponentModel;
 
-namespace huypq.SmtSharedTest
+namespace huypq.SmtShared.Test
 {
     [ProtoBuf.ProtoContract]
-    public partial class TestDataDto : IDto, INotifyPropertyChanged
+    public partial class SmtUserClaimDto : IUserClaimDto, INotifyPropertyChanged
     {
-        string oData;
+        string oClaim;
         int oID;
         long oCreateTime;
         long oLastUpdateTime;
         int oTenantID;
+        int oUserID;
 
-        string _Data;
+        string _Claim;
         int _ID;
         long _CreateTime;
         long _LastUpdateTime;
         int _TenantID;
+        int _UserID;
 
         [ProtoBuf.ProtoMember(1)]
-        public string Data { get { return _Data; } set { _Data = value; OnPropertyChanged(); } }
+        public string Claim { get { return _Claim; } set { _Claim = value; OnPropertyChanged(); } }
         [ProtoBuf.ProtoMember(2)]
         public int ID { get { return _ID; } set { _ID = value; OnPropertyChanged(); } }
         [ProtoBuf.ProtoMember(3)]
@@ -29,37 +31,42 @@ namespace huypq.SmtSharedTest
         [ProtoBuf.ProtoMember(5)]
         public int TenantID { get { return _TenantID; } set { _TenantID = value; OnPropertyChanged(); } }
         [ProtoBuf.ProtoMember(6)]
+        public int UserID { get { return _UserID; } set { _UserID = value; OnPropertyChanged(); } }
+        [ProtoBuf.ProtoMember(7)]
         public int State { get; set; }
 
         public void SetCurrentValueAsOriginalValue()
         {
-            oData = Data;
+            oClaim = Claim;
             oID = ID;
             oCreateTime = CreateTime;
             oLastUpdateTime = LastUpdateTime;
             oTenantID = TenantID;
-        }
-
-        public bool HasChange()
-        {
-            return (oData != Data)
-            || (oID != ID)
-            || (oCreateTime != CreateTime)
-            || (oLastUpdateTime != LastUpdateTime)
-            || (oTenantID != TenantID);
+            oUserID = UserID;
         }
 
         public void Update(object obj)
         {
-            var dto = obj as TestDataDto;
+            var dto = obj as SmtUserClaimDto;
             if (dto == null)
             {
                 return;
             }
-            
-            Data = dto.Data;
+
+            Claim = dto.Claim;
             LastUpdateTime = dto.LastUpdateTime;
-            TenantID = TenantID;
+            TenantID = dto.TenantID;
+            UserID = dto.UserID;
+        }
+
+        public bool HasChange()
+        {
+            return (oClaim != Claim)
+            || (oID != ID)
+            || (oCreateTime != CreateTime)
+            || (oLastUpdateTime != LastUpdateTime)
+            || (oTenantID != TenantID)
+            || (oUserID != UserID);
         }
 
         object _UserIDSources;
@@ -70,9 +77,6 @@ namespace huypq.SmtSharedTest
         public virtual void OnPropertyChanged([System.Runtime.CompilerServices.CallerMemberName] string name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-            RaiseDependentPropertyChanged(name);
         }
-
-        partial void RaiseDependentPropertyChanged(string basePropertyName);
     }
 }

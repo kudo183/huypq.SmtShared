@@ -1,7 +1,7 @@
 ﻿using huypq.SmtShared;
 using System.ComponentModel;
 
-namespace huypq.SmtSharedTest
+namespace huypq.SmtShared.Test
 {
     [ProtoBuf.ProtoContract]
     public partial class SmtUserDto : IUserDto, INotifyPropertyChanged

@@ -48,16 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\src\huypq.SmtSharedTest\TestChildDataDto.cs">
+    <Compile Include="..\..\..\src\huypq.SmtShared.Test\TestChildDataDto.cs">
       <Link>TestChildDataDto.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtSharedTest\TestDataDto.cs">
+    <Compile Include="..\..\..\src\huypq.SmtShared.Test\TestDataDto.cs">
       <Link>TestDataDto.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtSharedTest\UserClaimDto.cs">
+    <Compile Include="..\..\..\src\huypq.SmtShared.Test\UserClaimDto.cs">
       <Link>UserClaimDto.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtSharedTest\UserDto.cs">
+    <Compile Include="..\..\..\src\huypq.SmtShared.Test\UserDto.cs">
       <Link>UserDto.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
