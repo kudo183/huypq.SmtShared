@@ -7,8 +7,8 @@
     <ProjectGuid>{8D59423A-9325-484D-A398-FEDD48375155}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>huypq.SmtSharedTest</RootNamespace>
-    <AssemblyName>huypq.SmtSharedTest</AssemblyName>
+    <RootNamespace>huypq.SmtShared.Test</RootNamespace>
+    <AssemblyName>huypq.SmtShared.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
