@@ -53,6 +53,9 @@
     <Compile Include="..\..\..\src\huypq.SmtShared\Constant\TokenPurpose.cs">
       <Link>Constant\TokenPurpose.cs</Link>
     </Compile>
+    <Compile Include="..\..\..\src\huypq.SmtShared\IDisplayTextDto.cs">
+      <Link>IDisplayTextDto.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\src\huypq.SmtShared\IDto.cs">
       <Link>IDto.cs</Link>
     </Compile>
