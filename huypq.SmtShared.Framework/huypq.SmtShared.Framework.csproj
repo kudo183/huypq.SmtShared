@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8D59423A-9325-484D-A398-FEDD48375155}</ProjectGuid>
+    <ProjectGuid>{DBB09141-9D0C-4867-9248-1FC2E8A5EEC5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>huypq.SmtShared.Test</RootNamespace>
-    <AssemblyName>huypq.SmtShared.Test</AssemblyName>
+    <RootNamespace>huypq.SmtShared</RootNamespace>
+    <AssemblyName>huypq.SmtShared</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,13 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\packages\protobuf-net.2.1.0\lib\net451\protobuf-net.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="protobuf-net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.3.0\lib\net40\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,36 +43,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\src\huypq.SmtShared.Test\TestChildDataDto.cs">
-      <Link>TestChildDataDto.cs</Link>
+    <Compile Include="..\huypq.SmtShared\Constant\ControllerAction.cs">
+      <Link>Constant\ControllerAction.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared.Test\TestDataDto.cs">
-      <Link>TestDataDto.cs</Link>
+    <Compile Include="..\huypq.SmtShared\Constant\DtoState.cs">
+      <Link>Constant\DtoState.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared.Test\UserClaimDto.cs">
-      <Link>UserClaimDto.cs</Link>
+    <Compile Include="..\huypq.SmtShared\Constant\SerializeType.cs">
+      <Link>Constant\SerializeType.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\src\huypq.SmtShared.Test\UserDto.cs">
-      <Link>UserDto.cs</Link>
+    <Compile Include="..\huypq.SmtShared\Constant\TokenPurpose.cs">
+      <Link>Constant\TokenPurpose.cs</Link>
+    </Compile>
+    <Compile Include="..\huypq.SmtShared\IDisplayTextDto.cs">
+      <Link>IDisplayTextDto.cs</Link>
+    </Compile>
+    <Compile Include="..\huypq.SmtShared\IDto.cs">
+      <Link>IDto.cs</Link>
+    </Compile>
+    <Compile Include="..\huypq.SmtShared\IUserClaimDto.cs">
+      <Link>IUserClaimDto.cs</Link>
+    </Compile>
+    <Compile Include="..\huypq.SmtShared\IUserDto.cs">
+      <Link>IUserDto.cs</Link>
+    </Compile>
+    <Compile Include="..\huypq.SmtShared\PagingResultDto.cs">
+      <Link>PagingResultDto.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestDataDto.part.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\huypq.SmtShared\huypq.SmtShared.csproj">
-      <Project>{d0ea0474-d927-4193-9dda-58363e8a64c4}</Project>
-      <Name>huypq.SmtShared</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
