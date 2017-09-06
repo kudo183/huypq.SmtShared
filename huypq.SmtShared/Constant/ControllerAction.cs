@@ -27,5 +27,13 @@
             public const string Update = "update";
             public const string Delete = "delete";
         }
+
+        public class SmtFileBase
+        {
+            public const string GetByID = "getbyid";
+            public const string Add = "add";
+            public const string Update = "update";
+            public const string Download = "download";
+        }
     }
 }
