@@ -34,6 +34,7 @@
             public const string Add = "add";
             public const string Update = "update";
             public const string Download = "download";
+            public const string Delete = "delete";
         }
 
         public class SmtImageFileBase : SmtFileBase
