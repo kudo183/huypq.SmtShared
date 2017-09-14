@@ -35,5 +35,10 @@
             public const string Update = "update";
             public const string Download = "download";
         }
+
+        public class SmtImageFileBase : SmtFileBase
+        {
+            public const string GetThumbnailByID = "getthumbnailbyid";
+        }
     }
 }
