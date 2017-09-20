@@ -7,8 +7,5 @@
         int State { get; set; }
         long CreateTime { get; set; }
         long LastUpdateTime { get; set; }
-        bool HasChange();
-        void Update(object obj);
-        void SetCurrentValueAsOriginalValue();
     }
 }

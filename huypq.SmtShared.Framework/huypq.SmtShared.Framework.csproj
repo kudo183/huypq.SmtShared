@@ -58,9 +58,6 @@
     <Compile Include="..\huypq.SmtShared\Constant\TokenPurpose.cs">
       <Link>Constant\TokenPurpose.cs</Link>
     </Compile>
-    <Compile Include="..\huypq.SmtShared\IDisplayTextDto.cs">
-      <Link>IDisplayTextDto.cs</Link>
-    </Compile>
     <Compile Include="..\huypq.SmtShared\IDto.cs">
       <Link>IDto.cs</Link>
     </Compile>
