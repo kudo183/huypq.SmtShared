@@ -14,6 +14,7 @@
             public const string ChangePassword = "changepassword";
             public const string ResetPassword = "resetpassword";
             public const string Logout = "logout";
+            public const string IP = "ip";
         }
 
         public class SmtEntityBase
