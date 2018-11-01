@@ -16,6 +16,8 @@
             public const string Logout = "logout";
             public const string IP = "ip";
             public const string Ping = "ping";
+            public const string TenantLogout = "tenantlogout";
+            public const string UserLogout = "userlogout";
         }
 
         public class SmtEntityBase
