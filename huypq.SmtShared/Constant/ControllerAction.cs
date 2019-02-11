@@ -7,6 +7,7 @@
             public const string ControllerName = "smt";
             public const string Register = "register";
             public const string TenantLogin = "tenantlogin";
+            public const string TenantLoginWithIdToken = "tenantloginwithidtoken";
             public const string UserLogin = "userlogin";
             public const string TenantRequestToken = "tenantrequesttoken";
             public const string UserRequestToken = "userrequesttoken";
