@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\huypq.SmtShared\Constant\ControllerAction.cs" Link="Constant\ControllerAction.cs" />
+    <Compile Include="..\huypq.SmtShared\Constant\DtoState.cs" Link="Constant\DtoState.cs" />
+    <Compile Include="..\huypq.SmtShared\Constant\SerializeType.cs" Link="Constant\SerializeType.cs" />
+    <Compile Include="..\huypq.SmtShared\Constant\TokenPurpose.cs" Link="Constant\TokenPurpose.cs" />
+    <Compile Include="..\huypq.SmtShared\IDto.cs" Link="IDto.cs" />
+    <Compile Include="..\huypq.SmtShared\IUserClaimDto.cs" Link="IUserClaimDto.cs" />
+    <Compile Include="..\huypq.SmtShared\IUserDto.cs" Link="IUserDto.cs" />
+    <Compile Include="..\huypq.SmtShared\PagingResultDto.cs" Link="PagingResultDto.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Constant\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="protobuf-net" Version="2.4.0" />
+  </ItemGroup>
+
+</Project>
